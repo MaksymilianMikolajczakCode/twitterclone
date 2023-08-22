@@ -1,16 +1,37 @@
 import Main from "@/components/Main"
 import LeftSidebar from "../components/LeftSidebar"
 import RightSidebar from "@/components/RightSidebar"
+import { cookies } from 'next/headers'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import Login from '@/app/login'
+
+export const dynamic = 'force-dynamic'
 
 
-const Home = () => {
+// export default async function Page() {
+//   const supabase = createServerComponentClient({ cookies })
+//   const { data } = await supabase.from('todos').select()
+//   return <pre>{JSON.stringify(data, null, 2)}</pre>
+// }
+
+
+
+const Home = async () => {
+  const supabase = createServerComponentClient({ cookies })
+  const { data, error } = await supabase.auth.getUser()
+
+  console.log(data)
+
   return (
+    <div>
+      <Login/>
     <div className='w-full h-full flex justify-center items-center text-white bg-black relative'>
       <div className='max-w-[70vw] w-full h-full flex relative'>
         <LeftSidebar/>
         <Main/>
         <RightSidebar/>
       </div>
+    </div>
     </div>
   )
 }
