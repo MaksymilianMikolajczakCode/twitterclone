@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs"
 
 const RightSidebar = () => {
   return (
-    <section className="w-[25%] sticky overflow-scroll top-2 mt-2 flex flex-col items-stretch h-screen px-6">
+    <section className="w-[25%] hidden sticky overflow-scroll top-2 mt-2 lg:flex flex-col items-stretch h-screen px-6">
     <div>
       <div className="relative w-full h-full group"> 
         <input id="searchBox"

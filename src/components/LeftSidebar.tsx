@@ -37,7 +37,7 @@ const NAVIGATION_ITEMS = [
 
 const LeftSidebar = () => {
   return (
-    <section className='sticky top-0 w-[25%] items-stretch flex flex-col h-screen'>
+    <section className='sticky top-0 w-[25%] hidden items-stretch lg:flex flex-col h-screen'>
     <div className='flex flex-col items-stretch h-screen space-y-4 my-4'>
     {NAVIGATION_ITEMS.map((item)=>(
       <Link className='hover:bg-white/10 rounded-3xl text-2xl transition duration-200 flex items-center justify-start w-fit space-x-4 p-2' 

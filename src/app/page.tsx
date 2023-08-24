@@ -24,9 +24,9 @@ const Home = async () => {
 
   return (
     <div>
-      <Login/>
-    <div className='w-full h-full flex justify-center items-center text-white bg-black relative'>
-      <div className='max-w-[70vw] w-full h-full flex relative'>
+      {/* <Login/> */}
+    <div>
+      <div className='w-full h-full flex relative'>
         <LeftSidebar/>
         <Main/>
         <RightSidebar/>
